@@ -1,0 +1,22 @@
+
+body{
+    padding: 10px;
+    margin: 5px;
+    border-width: 5px;
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/4572042562-63dcd92c42-o-1519178707.jpg?resize=480:*"); */
+    background-color: #0156a5;
+    }
+
+.hide {
+    display: none;
+}
+
+.jumbotron .form-group {
+display: flex;
+justify-content: center;
+}

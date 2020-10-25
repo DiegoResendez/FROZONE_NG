@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+    <ul class="nav nav-pills justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">BurningMan.com</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="https://www.seahawks.com/">Login</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li> -->
+    </ul>
+
+    <div class="jumbotron justify-content-end mainWelcomeScreen">
+        <h1 class="homePageWelcome">Welcome to the FROZONE Playa Name Generator</h1>
+        <p class="homePageTagLine">Don't let just any name generator or stupid human give you a playa name. Leave that
+            to the tiny magic penguins inside the
+            FROZONE Name Generator.</p>
+        <hr class="my-4">
+        <p>Just click Let's Get Started below or log back in to view your status</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Let's Get Started</a>
+    </div>
+    <div class="userInformation hide">
+        <form>
+            <div class="form-group hide">
+                <div class="row">
+                    <div class="col">
+                        <label for="firstName">First Name</label>
+                        <input type="name" class="form-control" id="firstName" placeholder="First Name">
+                    </div>
+                    <div class="col">
+                        <label for="lastName">Last Name</label>
+                        <input type="name" class="form-control" id="lastName" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="form-group ">
+        <form>
+            <label for="playaName">Playa Name</label>
+            <input type="name" class="form-control" id="playaName">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="giftNameCheckBox">
+                <label class="form-check-label" for="giftNameCheckBox">Gift Others Your Name</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+
+</html>
