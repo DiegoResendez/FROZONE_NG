@@ -13,10 +13,16 @@ body{
     }
 
 .hide {
-    display: none;
+    /* display: none; */
+    justify-content: center;
 }
 
 .jumbotron .form-group {
 display: flex;
 justify-content: center;
+}
+
+.emailAndAddressForm {
+    justify-content: left;
+    float: left;
 }
