@@ -17,7 +17,7 @@ function getUserInfo()
 {
     // startTimer();
     newUserInformationElement.classList.remove("hide");
-    // questionContainerElement.classList.remove("hide");
+    nameDonationElement.classList.add("hide");
     // setNextQuestion();
     console.log("Go to Start screen")
 }
@@ -25,7 +25,7 @@ function getUserInfo()
 function giftMyName()
 {
     nameDonationElement.classList.remove("hide");
-    // questionContainerElement.classList.remove("hide");
+    newUserInformation.classList.add("hide");
 
     console.log("Go to gift screen")
 }

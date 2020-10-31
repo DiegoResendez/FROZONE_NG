@@ -9,6 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/4572042562-63dcd92c42-o-1519178707.jpg?resize=480:*"); */
+    background-image: url("https://www.outsideonline.com/sites/default/files/styles/img_850x480/public/migrated-images_parent/migrated-images_78/igloo-real-tools_h.jpg?itok=_6SnzUm8");
     background-color: #0156a5;
     }
 
@@ -20,9 +21,15 @@ body{
 .jumbotron .form-group {
 display: flex;
 justify-content: center;
+/* background-color: #0156a5; */
+color: aqua;
+
 }
 
 .emailAndAddressForm {
     justify-content: left;
     float: left;
+}
+.nav-item {
+    color: black;
 }
