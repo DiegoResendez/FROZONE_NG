@@ -14,7 +14,7 @@
 <body>
     <ul class="nav nav-pills justify-content-end">
         <li class="nav-item">
-            <a class="nav-link" href="https://www.seahawks.com/">BurningMan.com</a>
+            <a class="nav-link" href="https://burningman.org/">BurningMan.com</a>
             <!-- <a class="nav-link active" href="#">BurningMan.com</a> -->
         </li>
         <li class="nav-item">
@@ -35,11 +35,11 @@
             FROZONE Name Generator.</p>
         <hr class="my-4">
         <p>Just click Let's Get Started below or log back in to view your status</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Let's Get Started</a>
-        <a class="btn btn-secondary btn-lg" href="#" role="button">Gift My Name</a>
+        <a class="startButton btn btn-primary btn-lg" id="startButton" href="#" role="button">Let's Get Started</a>
+        <a class="giftButton btn btn-secondary btn-lg" id="giftButton" href="#" role="button">Gift My Name</a>
 
     </div>
-    <div class="nameDonation">
+    <div class="nameDonation hide" id="nameDonation">
         <form>
             <div class="form-group">
                 <div class="row">
@@ -71,7 +71,7 @@
                               <input type="text" class="form-control" id="inputZip">
                             </div>
                           </div>
-                          <button type="submit" class="btn btn-primary">Gift My Name</button>
+                          <button type="submit" class="giftNameButton btn btn-primary" id="giftNameButton">Gift My Name</button>
                     </div>
                     <div class="col">
                         <label for="lastName">Last Name</label>
@@ -83,7 +83,7 @@
     </form>
 </div>
 <br>
-<div class="newUserInformation">
+<div class="newUserInformation hide" id="newUserInformation">
     <form>
         <div class="form-group">
             <div class="row">
@@ -109,7 +109,7 @@
                           <input type="text" class="form-control" id="inputZip">
                         </div>
                       </div>
-                      <button type="submit" class="btn btn-primary">Get My Playa Name</button>
+                      <button type="submit" class="getPlayaName btn btn-primary" id="getPlayaName">Get My Playa Name</button>
                 </div>
                 <div class="col">
                     <label for="lastName">Last Name</label>
@@ -121,6 +121,7 @@
 </form>
 </div>
 
+<script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
