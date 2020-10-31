@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/4572042562-63dcd92c42-o-1519178707.jpg?resize=480:*"); */
-    background-image: url("https://www.outsideonline.com/sites/default/files/styles/img_850x480/public/migrated-images_parent/migrated-images_78/igloo-real-tools_h.jpg?itok=_6SnzUm8");
+    background-image: url("https://i.dailymail.co.uk/i/pix/2011/09/07/article-2034587-0DC01C0E00000578-266_1024x615_large.jpg");
     background-color: #0156a5;
     }
 
@@ -42,4 +42,7 @@ color: aqua;
     height: 800px;
     width: 1000px;
     justify-content: right;
+}
+.endScreenText{
+    color: darkblue;
 }
