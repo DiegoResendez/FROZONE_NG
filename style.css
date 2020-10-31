@@ -9,7 +9,8 @@ body{
     justify-content: center;
     align-items: center;
     /* background-image: url("https://djmp3.live/wp-content/uploads/2020/09/burning-man-large-2.jpg"); */
-    background-image: url("https://i.dailymail.co.uk/i/pix/2011/09/07/article-2034587-0DC01C0E00000578-266_1024x615_large.jpg");
+    /* background-image: url("https://i.dailymail.co.uk/i/pix/2011/09/07/article-2034587-0DC01C0E00000578-266_1024x615_large.jpg"); */
+    background-image: url("https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-0/p180x540/121673267_2007267369404000_3173177398095299345_n.jpg?_nc_cat=107&ccb=2&_nc_sid=19026a&_nc_ohc=XTXMtr-1IE0AX_hvqeV&_nc_ht=scontent-sea1-1.xx&tp=6&oh=b8c9942bed76763bc91e3b7c1121eca2&oe=5FC26A63");
     background-color: #0156a5;
     }
 
