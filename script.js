@@ -133,39 +133,39 @@ function showPlayaNameScreen(){
 
 const question = [
     {
-        q: "Trivia Question Template",
+        q: "What year was the first year Arctica accepted Credit Cards?",
         answer: [
-            { text: "Correct Answer", correct: true },
-            { text: "Incorrect Answer 1", correct: false },
-            { text: "Incorrect Answer 2", correct: false },
-            { text: "Incorrect Answer 3", correct: false },
+            { text: "2019", correct: true },
+            { text: "NEVER", correct: false },
+            { text: "2021", correct: false },
+            { text: "2000", correct: false },
         ],
     },
     {
-        q: "Trivia Question Template",
+        q: "A bag of ice costs how much?",
         answer: [
-            { text: "Incorrect Answer 1", correct: false },
-            { text: "Incorrect Answer 2", correct: false },
-            { text: "Correct Answer", correct: true },
-            { text: "Incorrect Answer 3", correct: false },
+            { text: "$5.00 USD", correct: false },
+            { text: "$0.50 USD", correct: false },
+            { text: "$2.00 USD", correct: true },
+            { text: "$4.00 USD", correct: false },
         ],
     },
     {
-        q: "Trivia Question Template",
+        q: "The Man burns on which day?",
         answer: [
-            { text: "Incorrect Answer 1", correct: false },
-            { text: "Correct Answer", correct: true },
-            { text: "Incorrect Answer 2", correct: false },
-            { text: "Incorrect Answer 3", correct: false },
+            { text: "Sunday", correct: false },
+            { text: "Saturday", correct: true },
+            { text: "Yesterday", correct: false },
+            { text: "Friday", correct: false },
         ],
     },
     {
-        q: "Trivia Question Template",
+        q: "Black Rock City is home to what event?",
         answer: [
-            { text: "Correct Answer", correct: true },
-            { text: "Incorrect Answer 1", correct: false },
-            { text: "Incorrect Answer 2", correct: false },
-            { text: "Incorrect Answer 3", correct: false },
+            { text: "Burning Man", correct: true },
+            { text: "Coachella", correct: false },
+            { text: "Lollapalooza", correct: false },
+            { text: "Woodstock", correct: false },
         ],
     },
     {
