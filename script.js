@@ -5,6 +5,10 @@ const giftNameButton = document.getElementById("giftNameButton")
 const getPlayaNameButton = document.getElementById("getPlayaName")
 const newUserInformationElement = document.getElementById("newUserInformation");
 const nameDonationElement = document.getElementById("nameDonation");
+const questionContainerElement = document.getElementById("questionContainer")
+const mainWelcomeScreenElement = document.getElementById("mainWelcomeScreen")
+
+
 
 
 giftButton.addEventListener("click", giftMyName);
@@ -37,5 +41,9 @@ function addPlayaNameToDB()
 
 function startNameGenerator()
 {
+    questionContainerElement.classList.remove("hide");
+    newUserInformationElement.classList.add("hide");
+    mainWelcomeScreenElement.classList.add("hide");
+ 
     console.log("Go to Questions Bank")
 }
