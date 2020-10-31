@@ -8,7 +8,7 @@ body{
     height: 100%;
     justify-content: center;
     align-items: center;
-    /* background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/4572042562-63dcd92c42-o-1519178707.jpg?resize=480:*"); */
+    /* background-image: url("https://djmp3.live/wp-content/uploads/2020/09/burning-man-large-2.jpg"); */
     background-image: url("https://i.dailymail.co.uk/i/pix/2011/09/07/article-2034587-0DC01C0E00000578-266_1024x615_large.jpg");
     background-color: #0156a5;
     }
@@ -34,15 +34,38 @@ color: aqua;
     color: black;
 }
 
-.questionContainer{
+.questionContainer {
 
     background-color: rgb(0, 217, 255) ;
     /* background-origin: padding-box; */
     /* border: slategrey; */
     height: 800px;
     width: 1000px;
-    justify-content: right;
+    justify-content: center;
 }
-.endScreenText{
+
+.suckerScreenContainer {
+
+    background-color: rgba(6, 233, 44, 0.925) ;
+    /* background-origin: padding-box; */
+    /* border: slategrey; */
+    height: 800px;
+    width: 1000px;
+    justify-content: center;
+}
+
+.question {
+    size: 20cm;
+}
+
+.endScreenText {
     color: darkblue;
+}
+
+.suckerScreenText {
+    color: rgba(237, 253, 11, 0.897);
+}
+
+.suckerScreenSecondText {
+    color: rgba(237, 253, 11, 0.897);
 }

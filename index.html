@@ -35,8 +35,8 @@
             FROZONE Name Generator.</p>
         <hr class="my-4">
         <p>Just click Let's Get Started below or if you would like to gift your name click Gift My Name.</p>
-        <a class="startButton btn btn-primary btn-lg" id="startButton" href="#" role="button">Let's Get Started</a>
-        <a class="giftButton btn btn-secondary btn-lg" id="giftButton" href="#" role="button">Gift Playa Name</a>
+        <a class="startButton btn btn-info btn-lg" id="startButton" href="#" role="button">Let's Get Started</a>
+        <a class="giftButton btn btn-success btn-lg" id="giftButton" href="#" role="button">Gift Playa Name</a>
 
     </div>
     <div class="nameDonation hide" id="nameDonation">
@@ -49,30 +49,31 @@
                         <br>
                         <label for="playaName">Playa Name</label>
                         <input type="name" class="form-control" id="playaName">
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="giftNameCheckBox">
-                            <label class="form-check-label" for="giftNameCheckBox">Gift Others Your Name</label>
-                        </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                              <label for="inputCity">City</label>
-                              <input type="text" class="form-control" id="inputCity">
+                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control" id="inputCity">
                             </div>
                             <div class="form-group col-md-4">
-                              <label for="inputState">State</label>
-                              <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>WA</option>
-                                <option>...</option>
-    <!-- Need to create a list.  React would make this easier. -->
-                              </select>
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>WA</option>
+                                    <option>CA</option>
+                                    <option>...</option>
+                                    <!-- Need to create a list.  React would make this easier. -->
+                                </select>
                             </div>
                             <div class="form-group col-md-2">
-                              <label for="inputZip">Zip</label>
-                              <input type="text" class="form-control" id="inputZip">
+                                <label for="inputZip">Zip</label>
+                                <input type="text" class="form-control" id="inputZip">
                             </div>
-                          </div>
-                          <button type="submit" class="giftNameButton btn btn-primary" id="giftNameButton">Gift My Name</button>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="addToCensus">
+                                <label class="form-check-label" for="addToCensusCheckBox">Add your info to Census</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="giftNameButton btn btn-outline-success" id="giftNameButton">Gift My Name</button>
                     </div>
                     <div class="col">
                         <label for="lastName">Last Name</label>
@@ -80,7 +81,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </form>
 </div>
 <br>
@@ -101,6 +102,7 @@
                           <select id="inputState" class="form-control">
                             <option selected>Choose...</option>
                             <option>WA</option>
+                            <option>CA</option>
                             <option>...</option>
 <!-- Need to create a list.  React would make this easier. -->
                           </select>
@@ -110,7 +112,7 @@
                           <input type="text" class="form-control" id="inputZip">
                         </div>
                       </div>
-                      <button type="submit" class="getPlayaName btn btn-primary" id="getPlayaName">Get My Playa Name</button>
+                      <button type="submit" class="getPlayaName btn btn-outline-primary" id="getPlayaName">Get My Playa Name</button>
                 </div>
                 <div class="col">
                     <label for="lastName">Last Name</label>
@@ -123,25 +125,47 @@
 </div>
 
 <div id="questionContainer" class="questionContainer hide">
-    <div id="question">
-        <h1 class="questionsScreen" id="questionsScreen">
+    <div id="question" class="question">
+        <h1>
             Question text
         </h1>
     </div>
-    <div id="answer-buttons" class="btn-grid">
-        <button class="btn buttonAnswer" id="buttonA">Answer 1</button>
-        <button class="btn buttonAnswer" id="buttonB">Answer 2</button>
-        <button class="btn buttonAnswer" id="buttonC">Answer 3</button>
-        <button class="btn buttonAnswer" id="buttonD">Answer 4</button>
+    <br>
+    <br>
+    <div id="answer-buttons" class="btn-group-vertical">
+        <button class="btn buttonAnswer btn-outline-dark" id="buttonA">Answer 1</button>
+        <br>
+        <button class="btn buttonAnswer btn-outline-secondary" id="buttonB">Answer 2</button>
+        <br>
+        <button class="btn buttonAnswer btn-outline-success" id="buttonC">Answer 3</button>
+        <br>
+        <button class="btn buttonAnswer btn-outline-danger" id="buttonD">Answer 4</button>
     </div>
 </div>
 
 <div class="newPlayaNameScreen hide" id="newPlayaNameScreen">
     <h1 class="endScreenText">Your Playa Name Is...</h1>  <!--ADD ID AND CLASS TO CHANGE COLOR   -->
     <a class="newPlayaName" id="newPlayaName" type="text"></a>
-</div>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="addToCensus">
+        <label class="form-check-label" for="addToCensusCheckBox">Add your info to Census</label>
+    </div>
+    <button type="submit" class="keepPlayaName btn btn-outline-success" id="keepPlayaName">Keep My Playa Name</button>
 </div>
 
+
+
+
+<div class="suckerScreen hide" id="suckerScreen">
+    <div class="suckerScreenContainer">
+    <h1 class="suckerScreenText">Thanks Sucka!!!!!!  </h1> 
+    <h3 class="suckerScreenSecondText">We just sold your soul to the highest bidder.  Best of luck.  
+        <p>-The Tiny Magic Penguins</p> </h3> <!--ADD ID AND CLASS TO CHANGE COLOR   -->
+    </div>
+</div>
+
+
+</div> <!--Final div tag-->
 
 
 <script type="text/javascript" src="script.js"></script>

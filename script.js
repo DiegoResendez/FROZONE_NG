@@ -10,7 +10,12 @@ const mainWelcomeScreenElement = document.getElementById("mainWelcomeScreen")
 const questionElement = document.getElementById("question");
 const answerButtonElements = document.getElementById("answer-buttons");
 const newPlayaNameScreenElement = document.getElementById("newPlayaNameScreen");
+const suckerScreenElement = document.getElementById("suckerScreen");
+const keepPlayaNameButton = document.getElementById("keepPlayaName")
+const statesElement = document.getElementById("inputState");
 
+
+let statesArray = []; //Array of State Abbrviations or a forLoop to go through and add to options in index.html lines 58,59 & 100,101
 
 const buttonA = document.getElementById("buttonA");
 const buttonB = document.getElementById("buttonB");
@@ -23,10 +28,11 @@ startButton.addEventListener("click", getUserInfo); //Let's Get Started Button
 giftButton.addEventListener("click", giftMyName); //Gift Playa Name Button
 giftNameButton.addEventListener("click", addPlayaNameToDB);  // Gift My Name Button
 getPlayaName.addEventListener("click", startNameGenerator);  // startNameGenerator 
+keepPlayaName.addEventListener("click", addPlayaNameToCensus);  // startNameGenerator 
+
 
 function getUserInfo() 
 {
-    // startTimer();
     newUserInformationElement.classList.remove("hide");
     nameDonationElement.classList.add("hide");
     // setNextQuestion();
@@ -37,12 +43,16 @@ function giftMyName()
 {
     nameDonationElement.classList.remove("hide");
     newUserInformation.classList.add("hide");
-
     console.log("Go to gift screen")
 }
 
 function addPlayaNameToDB() 
 {
+    suckerScreenElement.classList.remove("hide");
+    nameDonationElement.classList.add("hide");
+    newUserInformation.classList.add("hide");
+    mainWelcomeScreenElement.classList.add("hide");
+
     console.log("User gifts Playa name to others")
 }
 
@@ -56,6 +66,12 @@ function startNameGenerator()
  
     console.log("Go to Questions Bank")
 }
+
+function addPlayaNameToCensus()
+{
+    console.log("User keeps Generated Playa Name")
+}
+
 
 
 function setNextQuestion() {
@@ -86,7 +102,7 @@ let answerButton = document.getElementsByClassName("buttonAnswer");
          setNextQuestion()
         }
         else{
-            showleaderBoard();
+            showPlayaNameScreen();
         }
         //  if (answer === "false"){
         //     timerStart = timerStart - 10;
@@ -101,12 +117,12 @@ let answerButton = document.getElementsByClassName("buttonAnswer");
         //     // console.log(timerStart)
         //     // setScore();
         //     // console.log("Score should populate");
-        //     showleaderBoard();
+        //     showPlayaNameScreen();
         // }
     }) 
 }
 
-function showleaderBoard(){
+function showPlayaNameScreen(){
     newPlayaNameScreenElement.classList.remove("hide");
     questionContainerElement.classList.add("hide");
     // show your scoreboard
@@ -128,8 +144,17 @@ const question = [
     {
         q: "Trivia Question Template",
         answer: [
-            { text: "Correct Answer", correct: true },
             { text: "Incorrect Answer 1", correct: false },
+            { text: "Incorrect Answer 2", correct: false },
+            { text: "Correct Answer", correct: true },
+            { text: "Incorrect Answer 3", correct: false },
+        ],
+    },
+    {
+        q: "Trivia Question Template",
+        answer: [
+            { text: "Incorrect Answer 1", correct: false },
+            { text: "Correct Answer", correct: true },
             { text: "Incorrect Answer 2", correct: false },
             { text: "Incorrect Answer 3", correct: false },
         ],
@@ -146,35 +171,26 @@ const question = [
     {
         q: "Trivia Question Template",
         answer: [
-            { text: "Correct Answer", correct: true },
             { text: "Incorrect Answer 1", correct: false },
             { text: "Incorrect Answer 2", correct: false },
+            { text: "Incorrect Answer 3", correct: false },
+            { text: "Correct Answer", correct: true },
+        ],
+    },
+    {
+        q: "Trivia Question Template",
+        answer: [
+            { text: "Incorrect Answer 1", correct: false },
+            { text: "Incorrect Answer 2", correct: false },
+            { text: "Correct Answer", correct: true },
             { text: "Incorrect Answer 3", correct: false },
         ],
     },
     {
         q: "Trivia Question Template",
         answer: [
-            { text: "Correct Answer", correct: true },
             { text: "Incorrect Answer 1", correct: false },
-            { text: "Incorrect Answer 2", correct: false },
-            { text: "Incorrect Answer 3", correct: false },
-        ],
-    },
-    {
-        q: "Trivia Question Template",
-        answer: [
             { text: "Correct Answer", correct: true },
-            { text: "Incorrect Answer 1", correct: false },
-            { text: "Incorrect Answer 2", correct: false },
-            { text: "Incorrect Answer 3", correct: false },
-        ],
-    },
-    {
-        q: "Trivia Question Template",
-        answer: [
-            { text: "Correct Answer", correct: true },
-            { text: "Incorrect Answer 1", correct: false },
             { text: "Incorrect Answer 2", correct: false },
             { text: "Incorrect Answer 3", correct: false },
         ],
