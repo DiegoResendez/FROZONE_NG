@@ -23,6 +23,10 @@ const buttonC = document.getElementById("buttonC");
 const buttonD = document.getElementById("buttonD");
 
 let questionNumber = 0;
+let femininePlayaNamesArray = ["Princess Lollipop", "Bright Eyes", "Butterfly", "Miss Kitty Meow Meow", "Summer Vacation", "Lotus Flower", "Sugar Buns", "Honey Smacks"];
+let masculinePlayaNamesArray = ["Shitty McDoodoopants", "Chad", "Beaver Basher", "Tyler Needick", "Piss Weasle", "Schlong Dongadoodle","Tan Bannana", "Dickie McNutsack"];
+let kidsPlayaNamesArray = ["Kid appropriate name", "The Child", "Lil' Sebastian", "Tiger", "Beast", "Bobo"]
+
 
 startButton.addEventListener("click", getUserInfo); //Let's Get Started Button
 giftButton.addEventListener("click", giftMyName); //Gift Playa Name Button
@@ -169,30 +173,30 @@ const question = [
         ],
     },
     {
-        q: "Trivia Question Template",
+        q: "I am ________ years old.",
         answer: [
-            { text: "Incorrect Answer 1", correct: false },
-            { text: "Incorrect Answer 2", correct: false },
-            { text: "Incorrect Answer 3", correct: false },
-            { text: "Correct Answer", correct: true },
+            { text: "30", correct: false },
+            { text: "-12", correct: false },
+            { text: "1000", correct: false },
+            { text: "this many", correct: true },
         ],
     },
     {
-        q: "Trivia Question Template",
+        q: "True or False: Schrodinger's cat is named Mittens.",
         answer: [
-            { text: "Incorrect Answer 1", correct: false },
-            { text: "Incorrect Answer 2", correct: false },
-            { text: "Correct Answer", correct: true },
-            { text: "Incorrect Answer 3", correct: false },
+            { text: "False", correct: false },
+            { text: "True", correct: false },
+            { text: "Both True and False", correct: true },
+            { text: "Was or is?", correct: false },
         ],
     },
     {
-        q: "Trivia Question Template",
+        q: "Earth is the _____ planet from the sun.",
         answer: [
-            { text: "Incorrect Answer 1", correct: false },
-            { text: "Correct Answer", correct: true },
-            { text: "Incorrect Answer 2", correct: false },
-            { text: "Incorrect Answer 3", correct: false },
+            { text: "Best", correct: false },
+            { text: "Third", correct: true },
+            { text: "Last", correct: false },
+            { text: "Fourth", correct: false },
         ],
     },
 ]

@@ -45,6 +45,15 @@ color: aqua;
     justify-content: center;
 }
 
+.newPlayaNameScreen{
+    background-color: rgb(255, 81, 0) ;
+    /* background-origin: padding-box; */
+    /* border: slategrey; */
+    height: 500px;
+    width: 800px;
+    justify-content: center;
+}
+
 .suckerScreenContainer {
 
     background-color: rgba(6, 233, 44, 0.925) ;
