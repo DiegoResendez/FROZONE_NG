@@ -27,15 +27,14 @@ const NewUserCityElement = document.getElementById("NewUserCity");
 const newUserStateElement = document.getElementById("newUserState");
 const newUserZipElement = document.getElementById("newUserZip");
 const newUserLastNameElement = document.getElementById("newUserLastName");
+
+
 // const lastNameElement = document.getElementById("lastName");
 // const lastNameElement = document.getElementById("lastName");
-
-
-
-
-
 
 let statesArray = []; //Array of State Abbrviations or a forLoop to go through and add to options in index.html lines 58,59 & 100,101
+let suckersInfoArray = [];
+let userInfoArray = [];
 
 const buttonA = document.getElementById("buttonA");
 const buttonB = document.getElementById("buttonB");
@@ -46,48 +45,43 @@ let questionNumber = 0;
 let femininePlayaNamesArray = ["Princess Lollipop", "Bright Eyes", "Butterfly", "Miss Kitty Meow Meow", "Summer Vacation", "Lotus Flower", "Sugar Buns", "Honey Smacks", "Ginger Snaps"];
 let masculinePlayaNamesArray = ["Shitty McDoodoopants", "Chad", "Beaver Basher", "Tyler Needick", "Piss Weasle", "Schlong Dongadoodle","Tan Bannana", "Dickie McNutsack", "Unicorn Jizz"];
 let kidsPlayaNamesArray = ["Kid appropriate name", "The Child", "Lil' Sebastian", "Tiger", "Beast", "Bobo"];
-let fantasyPlayaNamesArray = ["Gizmo", "Frodo", "Gandolf","Minotour","Wolverine", "Zeus", "Jupiter", "Neptune", "Ares", "Mars"]
+let fantasyPlayaNamesArray = ["Gizmo", "Frodo", "Gandolf","Minotour","Wolverine", "Zeus", "Jupiter", "Neptune", "Ares", "Mars"];
+let donatedPlayaNamesArray = [];
 
 
 startButton.addEventListener("click", getUserInfo); //Let's Get Started Button
 giftButton.addEventListener("click", giftMyName); //Gift Playa Name Button
 giftNameButton.addEventListener("click", addPlayaNameToDB);  // Gift My Name Button
 getPlayaName.addEventListener("click", startNameGenerator);  // startNameGenerator 
-keepPlayaName.addEventListener("click", addPlayaNameToCensus);  // startNameGenerator 
+keepPlayaName.addEventListener("click", addPlayaNameToCensus);  // New User Keeps Name and Joins Census
 
 
 function getUserInfo() 
 {
     newUserInformationElement.classList.remove("hide");
     nameDonationElement.classList.add("hide");
-    // setNextQuestion();
-    console.log("Go to Start screen")
+    // console.log("Go to Start screen")
 }
 
 function giftMyName()
+
 {
     nameDonationElement.classList.remove("hide");
     newUserInformation.classList.add("hide");
-    console.log("Go to gift screen")
-
-    let firstName = firstNameElement.value;
-    firstNameElement.innerHTML = firstName;
-    let lastName = lastNameElement.value;
-    lastNameElement.innerHTML = lastName;
-    let playaName = playaNameElement.value;
-    playaNameElement.innerHTML = playaName;
-    let inputCity = inputCityElement.value;
-    inputCityElement.innerHTML = inputCity;
-    let inputState = inputStateElement.value;
-    inputStateElement.innerHTML = inputState;
-    let inputZip = inputZipElement.value;
-    inputZipElement.innerHTML = inputZip;
-
-    
+    // console.log("Go to gift screen")
 
 }
 
+function addSuckerInfoToArray()
+{
+    console.log("Sucker's Info will be added to array or DB")
+
+}
+
+
+
 function addPlayaNameToDB() 
+// event.preventDefault();
 {
     suckerScreenElement.classList.remove("hide");
     nameDonationElement.classList.add("hide");
@@ -96,13 +90,38 @@ function addPlayaNameToDB()
 
     console.log("This should add User's Playa Name to Array")
 
+    let firstName = firstNameElement.value;
+    firstNameElement.innerHTML = firstName;
+    suckersInfoArray.push(firstName);
+    // console.log(firstName)
+    let lastName = lastNameElement.value;
+    lastNameElement.innerHTML = lastName;
+    suckersInfoArray.push(lastName);
+    // console.log(lastName)
+    let playaName = playaNameElement.value;
+    playaNameElement.innerHTML = playaName;
+    donatedPlayaNamesArray.push(playaName);
+    // console.log(playaName)
+    let inputCity = inputCityElement.value;
+    inputCityElement.innerHTML = inputCity;
+    suckersInfoArray.push(inputCity);
+    // console.log(inputCity)
+    let inputState = inputStateElement.value;
+    inputStateElement.innerHTML = inputState;
+    suckersInfoArray.push(inputState);
+    // console.log(inputState)
+    let inputZip = inputZipElement.value;
+    inputZipElement.innerHTML = inputZip;
+    suckersInfoArray.push(inputZip);
+    // console.log(inputZip)
+    console.log(suckersInfoArray)
+    console.log(donatedPlayaNamesArray)
 
-
-
-
+   // addSuckerInfoToArray();
 }
 
 function startNameGenerator()
+// event.preventDefault();
 {
     setNextQuestion();
     questionContainerElement.classList.remove("hide");
@@ -111,18 +130,24 @@ function startNameGenerator()
 
     let userFirstName = newUserFirstNameElement.value;
     newUserFirstNameElement.innerHTML = userFirstName;
+    userInfoArray.push(userFirstName);
     let userLastName = newUserLastNameElement.value;
-    newUserLastNameElement.innerHTML = userLastName;
+    newUserLastNameElement.innerHTML = userLastName
+    userInfoArray.push(userLastName);
     let userCity = NewUserCityElement.value;
     NewUserCityElement.innerHTML = userCity;
+    userInfoArray.push(userCity);
     let userState = newUserStateElement.value;
     newUserStateElement.innerHTML = userState;
+    userInfoArray.push(userState);
     let userZip = newUserZipElement.value;
     newUserZipElement.innerHTML = userZip;
-    // console.log(userFirstName);
+    userInfoArray.push(userZip);
+
+    console.log(userInfoArray);
 
 
- 
+
     console.log("Go to Questions Bank");
 }
 
