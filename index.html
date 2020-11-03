@@ -70,8 +70,18 @@
                                 <input type="text" class="form-control" id="inputZip" placeholder="Zip Code">
                             </div>
                             <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="addToCensus">
-                                <label class="form-check-label" for="addToCensusCheckBox">Add your info to Census</label>
+                                <!-- Will need to make sure only one checkbox is able to be checked at a time. -->
+                                <input type="checkbox" class="form-check-input" id="masculineName">
+                                <label class="form-check-label" for="addMasculineNameToMasculineArray">Masculine</label>
+                                <br>
+                                <input type="checkbox" class="form-check-input" id="feminineName">
+                                <label class="form-check-label" for="addFemininNameToFeminineArray">Feminine</label>
+                                <br>
+                                <input type="checkbox" class="form-check-input" id="fantasyName">
+                                <label class="form-check-label" for="addFantasyNameToFantasyArrayx">Fantasy</label>
+                                <br>
+                                <input type="checkbox" class="form-check-input" id="childName">
+                                <label class="form-check-label" for="addChildNameToChildArray">Child</label>
                             </div>
                         </div>
                         <button type="submit" class="giftNameButton btn btn-outline-success" id="giftNameButton">Gift My Name</button>
@@ -92,16 +102,16 @@
             <div class="row">
                 <div class="col">
                     <!-- <label for="firstName">First Name</label> -->
-                    <input type="name" class="form-control" id="firstName" placeholder="First Name">
+                    <input type="name" class="form-control" id="newUserFirstName" placeholder="First Name">
                     <br>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                           <!-- <label for="inputCity">City</label> -->
-                          <input type="text" class="form-control" id="inputCity" placeholder="City">
+                          <input type="text" class="form-control" id="NewUserCity" placeholder="City">
                         </div>
                         <div class="form-group col-md-4">
                           <!-- <label for="inputState">State</label> -->
-                          <select id="inputState" class="form-control" placeholder="State">
+                          <select id="newUserState" class="form-control" placeholder="State">
                             <option selected>State...</option>
                             <option>WA</option>
                             <option>CA</option>
@@ -111,14 +121,14 @@
                         </div>
                         <div class="form-group col-md-2">
                           <!-- <label for="inputZip">Zip</label> -->
-                          <input type="text" class="form-control" id="inputZip" placeholder="Zip Code">
+                          <input type="text" class="form-control" id="newUserZip" placeholder="Zip Code">
                         </div>
                       </div>
                       <button type="submit" class="getPlayaName btn btn-outline-primary" id="getPlayaName">Get My Playa Name</button>
                 </div>
                 <div class="col">
                     <!-- <label for="lastName">Last Name</label> -->
-                    <input type="name" class="form-control" id="lastName" placeholder="Last Name">
+                    <input type="name" class="form-control" id="newUserLastName" placeholder="Last Name">
                 </div>
             </div>
         </div>

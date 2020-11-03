@@ -12,7 +12,27 @@ const answerButtonElements = document.getElementById("answer-buttons");
 const newPlayaNameScreenElement = document.getElementById("newPlayaNameScreen");
 const suckerScreenElement = document.getElementById("suckerScreen");
 const keepPlayaNameButton = document.getElementById("keepPlayaName")
-const statesElement = document.getElementById("inputState");
+const firstNameElement = document.getElementById("firstName");
+const lastNameElement = document.getElementById("lastName");
+const playaNameElement = document.getElementById("playaName");
+const inputCityElement = document.getElementById("inputCity");
+const inputStateElement = document.getElementById("inputState");
+const inputZipElement = document.getElementById("inputZip");
+const masculineNameElement = document.getElementById("masculineName");
+const feminineNameElement = document.getElementById("feminineName");
+const fantasyNameElement = document.getElementById("fantasyName");
+const childNameElement = document.getElementById("childName");
+const newUserFirstNameElement = document.getElementById("newUserFirstName");
+const NewUserCityElement = document.getElementById("NewUserCity");
+const newUserStateElement = document.getElementById("newUserState");
+const newUserZipElement = document.getElementById("newUserZip");
+const newUserLastNameElement = document.getElementById("newUserLastName");
+// const lastNameElement = document.getElementById("lastName");
+// const lastNameElement = document.getElementById("lastName");
+
+
+
+
 
 
 let statesArray = []; //Array of State Abbrviations or a forLoop to go through and add to options in index.html lines 58,59 & 100,101
@@ -23,9 +43,10 @@ const buttonC = document.getElementById("buttonC");
 const buttonD = document.getElementById("buttonD");
 
 let questionNumber = 0;
-let femininePlayaNamesArray = ["Princess Lollipop", "Bright Eyes", "Butterfly", "Miss Kitty Meow Meow", "Summer Vacation", "Lotus Flower", "Sugar Buns", "Honey Smacks"];
-let masculinePlayaNamesArray = ["Shitty McDoodoopants", "Chad", "Beaver Basher", "Tyler Needick", "Piss Weasle", "Schlong Dongadoodle","Tan Bannana", "Dickie McNutsack"];
-let kidsPlayaNamesArray = ["Kid appropriate name", "The Child", "Lil' Sebastian", "Tiger", "Beast", "Bobo"]
+let femininePlayaNamesArray = ["Princess Lollipop", "Bright Eyes", "Butterfly", "Miss Kitty Meow Meow", "Summer Vacation", "Lotus Flower", "Sugar Buns", "Honey Smacks", "Ginger Snaps"];
+let masculinePlayaNamesArray = ["Shitty McDoodoopants", "Chad", "Beaver Basher", "Tyler Needick", "Piss Weasle", "Schlong Dongadoodle","Tan Bannana", "Dickie McNutsack", "Unicorn Jizz"];
+let kidsPlayaNamesArray = ["Kid appropriate name", "The Child", "Lil' Sebastian", "Tiger", "Beast", "Bobo"];
+let fantasyPlayaNamesArray = ["Gizmo", "Frodo", "Gandolf","Minotour","Wolverine", "Zeus", "Jupiter", "Neptune", "Ares", "Mars"]
 
 
 startButton.addEventListener("click", getUserInfo); //Let's Get Started Button
@@ -48,6 +69,22 @@ function giftMyName()
     nameDonationElement.classList.remove("hide");
     newUserInformation.classList.add("hide");
     console.log("Go to gift screen")
+
+    let firstName = firstNameElement.value;
+    firstNameElement.innerHTML = firstName;
+    let lastName = lastNameElement.value;
+    lastNameElement.innerHTML = lastName;
+    let playaName = playaNameElement.value;
+    playaNameElement.innerHTML = playaName;
+    let inputCity = inputCityElement.value;
+    inputCityElement.innerHTML = inputCity;
+    let inputState = inputStateElement.value;
+    inputStateElement.innerHTML = inputState;
+    let inputZip = inputZipElement.value;
+    inputZipElement.innerHTML = inputZip;
+
+    
+
 }
 
 function addPlayaNameToDB() 
@@ -57,7 +94,12 @@ function addPlayaNameToDB()
     newUserInformation.classList.add("hide");
     mainWelcomeScreenElement.classList.add("hide");
 
-    console.log("User gifts Playa name to others")
+    console.log("This should add User's Playa Name to Array")
+
+
+
+
+
 }
 
 function startNameGenerator()
@@ -67,8 +109,21 @@ function startNameGenerator()
     newUserInformationElement.classList.add("hide");
     mainWelcomeScreenElement.classList.add("hide");
 
+    let userFirstName = newUserFirstNameElement.value;
+    newUserFirstNameElement.innerHTML = userFirstName;
+    let userLastName = newUserLastNameElement.value;
+    newUserLastNameElement.innerHTML = userLastName;
+    let userCity = NewUserCityElement.value;
+    NewUserCityElement.innerHTML = userCity;
+    let userState = newUserStateElement.value;
+    newUserStateElement.innerHTML = userState;
+    let userZip = newUserZipElement.value;
+    newUserZipElement.innerHTML = userZip;
+    // console.log(userFirstName);
+
+
  
-    console.log("Go to Questions Bank")
+    console.log("Go to Questions Bank");
 }
 
 function addPlayaNameToCensus()
@@ -200,3 +255,14 @@ const question = [
         ],
     },
 ]
+
+
+
+
+//Adding answers from input: You could use an onclick event handler in order to get the input value for the text field. 
+// Make sure you give the field an unique id attribute so you can refer to it safely through document.getElementById():
+// If you want to dynamically add elements, you should have a container where to place them. For instance, a <div id="container">. 
+// Create new elements by means of document.createElement(), and use appendChild() to append each of them to the container. 
+// You might be interested in outputting a meaningful name attribute (e.g. name="member"+i for each of the dynamically generated <input>s if they are to be submitted in a form.
+// Notice you could also create <br/> elements with document.createElement('br'). If you want to just output some text, you can use document.createTextNode() instead.
+// Also, if you want to clear the container every time it is about to be populated, you could use hasChildNodes() and removeChild() together.
