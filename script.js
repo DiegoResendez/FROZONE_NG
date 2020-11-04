@@ -56,6 +56,20 @@ getPlayaName.addEventListener("click", startNameGenerator);  // startNameGenerat
 keepPlayaName.addEventListener("click", addPlayaNameToCensus);  // New User Keeps Name and Joins Census
 
 
+let userFirstName = newUserFirstNameElement.value;
+let userLastName = newUserLastNameElement.value;
+let userCity = NewUserCityElement.value;
+let userState = newUserStateElement.value;
+let userZip = newUserZipElement.value;
+
+let firstName = firstNameElement.value;
+let lastName = lastNameElement.value;
+let playaName = playaNameElement.value;
+let inputCity = inputCityElement.value;
+let inputState = inputStateElement.value;
+let inputZip = inputZipElement.value;
+
+
 function getUserInfo() 
 {
     newUserInformationElement.classList.remove("hide");
@@ -73,8 +87,6 @@ function giftMyName()
 }
 
 
-
-
 function addPlayaNameToDB() 
 // event.preventDefault();
 {
@@ -87,32 +99,26 @@ function addPlayaNameToDB()
     
     // Potential forLoop to remove redundancy.
     
-    let firstName = firstNameElement.value;
     firstNameElement.innerHTML = firstName;
     localStorage.setItem("firstName", firstName)
     suckersInfoArray.push(firstName);
     
-    let lastName = lastNameElement.value;
     lastNameElement.innerHTML = lastName;
     localStorage.setItem("lastName", lastName)
     suckersInfoArray.push(lastName);
     
-    let playaName = playaNameElement.value;
     playaNameElement.innerHTML = playaName;
     localStorage.setItem("playaName", playaName)
     donatedPlayaNamesArray.push(playaName);
     
-    let inputCity = inputCityElement.value;
     inputCityElement.innerHTML = inputCity;
     localStorage.setItem("inputCity", inputCity)
     suckersInfoArray.push(inputCity);
     
-    let inputState = inputStateElement.value;
     inputStateElement.innerHTML = inputState;
     localStorage.setItem("inputState", inputState)
     suckersInfoArray.push(inputState);
     
-    let inputZip = inputZipElement.value;
     inputZipElement.innerHTML = inputZip;
     localStorage.setItem("inputZip", inputZip)
     suckersInfoArray.push(inputZip);
@@ -133,27 +139,22 @@ function startNameGenerator()
     
     
     // Potential forLoop to remove redundancy.
-    let userFirstName = newUserFirstNameElement.value;
     newUserFirstNameElement.innerHTML = userFirstName;
     localStorage.setItem("userFirstName", userFirstName)
     // userInfoArray.push(userFirstName);
     
-    let userLastName = newUserLastNameElement.value;
     newUserLastNameElement.innerHTML = userLastName
     localStorage.setItem("userLastName", userLastName)
     userInfoArray.push(userLastName);
     
-    let userCity = NewUserCityElement.value;
     NewUserCityElement.innerHTML = userCity;
     localStorage.setItem("userCity", userCity)
     userInfoArray.push(userCity);
     
-    let userState = newUserStateElement.value;
     newUserStateElement.innerHTML = userState;
     localStorage.setItem("userState", userState)
     userInfoArray.push(userState);
     
-    let userZip = newUserZipElement.value;
     newUserZipElement.innerHTML = userZip;
     localStorage.setItem("userZip", userZip)
     userInfoArray.push(userZip);
@@ -166,6 +167,16 @@ function startNameGenerator()
 
 function addNewUserInfo()
 {
+    // I think I need a DB to add new user information.
+    let userInfo = {firstName: userFirstName, lastName: userLastName, city: userCity, state: userState, zipcode: userZip};
+    let userInfoArray = localStorage.getItem("userInfoArray");
+    console.log(userInfo)
+    if(userInfoArray){
+        userInfoArray = JSON.parse(userInfoArray)
+        userInfoArray.push(userInfo);
+    } else(userInfoArray = [userInfo]);
+    localStorage.setItem("userInfoArray", JSON.stringify(userInfoArray))
+
     console.log("Set values from localStorage to User Info Array")
 }
 
@@ -176,7 +187,17 @@ function addPlayaNameToCensus()
 
 function addSuckerInfoToArray()
 {
-    console.log("Sucker's Info will be added to array or DB")
+    let suckerInfo = {firstName: firstName, lastName: lastName, city: inputCity, state: inputState, zipcode: inputZip};
+    let suckersInfoArray = localStorage.getItem("suckersInfoArray");
+    console.log(suckerInfo)
+
+    if(suckersInfoArray){
+        suckersInfoArray = JSON.parse(suckersInfoArray)
+        suckersInfoArray.push(suckerInfo);
+    } else(suckersInfoArray = [suckerInfo]);
+    localStorage.setItem("suckersInfoArray", JSON.stringify(suckersInfoArray))
+    // console.log("Sucker's Info will be added to array or DB")
+    console.log("Need to add Playa Name to donatedPlayaNamesArray")
 
 }
 
