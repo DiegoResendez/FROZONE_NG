@@ -72,11 +72,6 @@ function giftMyName()
 
 }
 
-function addSuckerInfoToArray()
-{
-    console.log("Sucker's Info will be added to array or DB")
-
-}
 
 
 
@@ -87,37 +82,45 @@ function addPlayaNameToDB()
     nameDonationElement.classList.add("hide");
     newUserInformation.classList.add("hide");
     mainWelcomeScreenElement.classList.add("hide");
-
+    
     console.log("This should add User's Playa Name to Array")
-
+    
+    // Potential forLoop to remove redundancy.
+    
     let firstName = firstNameElement.value;
     firstNameElement.innerHTML = firstName;
+    localStorage.setItem("firstName", firstName)
     suckersInfoArray.push(firstName);
-    // console.log(firstName)
+    
     let lastName = lastNameElement.value;
     lastNameElement.innerHTML = lastName;
+    localStorage.setItem("lastName", lastName)
     suckersInfoArray.push(lastName);
-    // console.log(lastName)
+    
     let playaName = playaNameElement.value;
     playaNameElement.innerHTML = playaName;
+    localStorage.setItem("playaName", playaName)
     donatedPlayaNamesArray.push(playaName);
-    // console.log(playaName)
+    
     let inputCity = inputCityElement.value;
     inputCityElement.innerHTML = inputCity;
+    localStorage.setItem("inputCity", inputCity)
     suckersInfoArray.push(inputCity);
-    // console.log(inputCity)
+    
     let inputState = inputStateElement.value;
     inputStateElement.innerHTML = inputState;
+    localStorage.setItem("inputState", inputState)
     suckersInfoArray.push(inputState);
-    // console.log(inputState)
+    
     let inputZip = inputZipElement.value;
     inputZipElement.innerHTML = inputZip;
+    localStorage.setItem("inputZip", inputZip)
     suckersInfoArray.push(inputZip);
-    // console.log(inputZip)
+    
     console.log(suckersInfoArray)
     console.log(donatedPlayaNamesArray)
-
-   // addSuckerInfoToArray();
+    
+    // addSuckerInfoToArray();
 }
 
 function startNameGenerator()
@@ -127,28 +130,43 @@ function startNameGenerator()
     questionContainerElement.classList.remove("hide");
     newUserInformationElement.classList.add("hide");
     mainWelcomeScreenElement.classList.add("hide");
-
+    
+    
+    // Potential forLoop to remove redundancy.
     let userFirstName = newUserFirstNameElement.value;
     newUserFirstNameElement.innerHTML = userFirstName;
-    userInfoArray.push(userFirstName);
+    localStorage.setItem("userFirstName", userFirstName)
+    // userInfoArray.push(userFirstName);
+    
     let userLastName = newUserLastNameElement.value;
     newUserLastNameElement.innerHTML = userLastName
+    localStorage.setItem("userLastName", userLastName)
     userInfoArray.push(userLastName);
+    
     let userCity = NewUserCityElement.value;
     NewUserCityElement.innerHTML = userCity;
+    localStorage.setItem("userCity", userCity)
     userInfoArray.push(userCity);
+    
     let userState = newUserStateElement.value;
     newUserStateElement.innerHTML = userState;
+    localStorage.setItem("userState", userState)
     userInfoArray.push(userState);
+    
     let userZip = newUserZipElement.value;
     newUserZipElement.innerHTML = userZip;
+    localStorage.setItem("userZip", userZip)
     userInfoArray.push(userZip);
-
-    console.log(userInfoArray);
-
-
-
+    
+    console.log(userInfoArray); 
+    
     console.log("Go to Questions Bank");
+    addNewUserInfo();
+}
+
+function addNewUserInfo()
+{
+    console.log("Set values from localStorage to User Info Array")
 }
 
 function addPlayaNameToCensus()
@@ -156,6 +174,11 @@ function addPlayaNameToCensus()
     console.log("User keeps Generated Playa Name")
 }
 
+function addSuckerInfoToArray()
+{
+    console.log("Sucker's Info will be added to array or DB")
+
+}
 
 
 function setNextQuestion() {
