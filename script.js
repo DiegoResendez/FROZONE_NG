@@ -125,8 +125,18 @@ function addPlayaNameToDB()
     
     console.log(suckersInfoArray)
     console.log(donatedPlayaNamesArray)
-    
+    validateForm();
     // addSuckerInfoToArray();
+}
+
+function validateDonorForm()
+{
+
+}
+
+function validateUserForm()
+{
+
 }
 
 function startNameGenerator()
@@ -163,6 +173,7 @@ function startNameGenerator()
     
     console.log("Go to Questions Bank");
     addNewUserInfo();
+    validateUserForm();
 }
 
 function addNewUserInfo()

@@ -40,24 +40,24 @@
 
     </div>
     <div class="nameDonation hide" id="nameDonation">
-        <form>
+        <form name="donorForm" onsubmit="return validateDonorForm()" method="POST">
             <div class="form-group">
                 <div class="row">
                     <div class="col">
                         <!-- <label for="firstName">First Name</label> -->
-                        <input type="name" class="form-control" id="firstName" placeholder="First Name">
+                        <input type="name" class="form-control" id="firstName" name="fname" placeholder="First Name" required>
                         <br>
                         <!-- <label for="playaName">Playa Name</label> -->
-                        <input type="name" class="form-control" id="playaName" placeholder="Playa Name">
+                        <input type="name" class="form-control" id="playaName" name="pname" placeholder="Playa Name" required>
                         <br>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <!-- <label for="inputCity">City</label> -->
-                                <input type="text" class="form-control" id="inputCity" placeholder="City">
+                                <input type="text" class="form-control" id="inputCity" name="donorCity" placeholder="City" required>
                             </div>
                             <div class="form-group col-md-4">
                                 <!-- <label for="inputState">State...</label> -->
-                                <select id="inputState" class="form-control" placeholder="State">
+                                <select id="inputState" class="form-control" name="donorState" placeholder="State" required>
                                     <option selected>State...</option>
                                     <option>WA</option>
                                     <option>CA</option>
@@ -67,7 +67,7 @@
                             </div>
                             <div class="form-group col-md-2">
                                 <!-- <label for="inputZip">Zip</label> -->
-                                <input type="text" class="form-control" id="inputZip" placeholder="Zip Code">
+                                <input type="text" class="form-control" id="inputZip" name="donorZip" placeholder="Zip Code" required>
                             </div>
                             <div class="form-group form-check">
                                 <!-- Will need to make sure only one checkbox is able to be checked at a time. -->
@@ -84,11 +84,11 @@
                                 <label class="form-check-label" for="addChildNameToChildArray">Child</label>
                             </div>
                         </div>
-                        <button type="submit" class="giftNameButton btn btn-outline-success" id="giftNameButton">Gift My Name</button>
+                        <button type="submit" class="giftNameButton btn btn-outline-success" id="giftNameButton" value="Submit">Gift My Name</button>
                     </div>
                     <div class="col">
                         <!-- <label for="lastName">Last Name</label> -->
-                        <input type="name" class="form-control" id="lastName" placeholder="Last Name">
+                        <input type="name" class="form-control" id="lastName" name="lname" placeholder="Last Name" required>
                     </div>
                 </div>
             </div>
@@ -97,21 +97,21 @@
 </div>
 <br>
 <div class="newUserInformation hide" id="newUserInformation">
-    <form>
+    <form name="newUserForm" onsubmit="return validateUserForm()" method="POST">
         <div class="form-group">
             <div class="row">
                 <div class="col">
                     <!-- <label for="firstName">First Name</label> -->
-                    <input type="name" class="form-control" id="newUserFirstName" placeholder="First Name">
+                    <input type="name" class="form-control" id="newUserFirstName" name="userFirstName" placeholder="First Name" required>
                     <br>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                           <!-- <label for="inputCity">City</label> -->
-                          <input type="text" class="form-control" id="NewUserCity" placeholder="City">
+                          <input type="text" class="form-control" id="NewUserCity" name="userCity" placeholder="City" required>
                         </div>
                         <div class="form-group col-md-4">
                           <!-- <label for="inputState">State</label> -->
-                          <select id="newUserState" class="form-control" placeholder="State">
+                          <select id="newUserState" class="form-control" placeholder="State" required>
                             <option selected>State...</option>
                             <option>WA</option>
                             <option>CA</option>
@@ -121,14 +121,14 @@
                         </div>
                         <div class="form-group col-md-2">
                           <!-- <label for="inputZip">Zip</label> -->
-                          <input type="text" class="form-control" id="newUserZip" placeholder="Zip Code">
+                          <input type="text" class="form-control" id="newUserZip" name="userZip" placeholder="Zip Code" required>
                         </div>
                       </div>
-                      <button type="submit" class="getPlayaName btn btn-outline-primary" id="getPlayaName">Get My Playa Name</button>
+                      <button type="submit" class="getPlayaName btn btn-outline-primary" id="getPlayaName" value="Submit">Get My Playa Name</button>
                 </div>
                 <div class="col">
                     <!-- <label for="lastName">Last Name</label> -->
-                    <input type="name" class="form-control" id="newUserLastName" placeholder="Last Name">
+                    <input type="name" class="form-control" id="newUserLastName" name="userLastName" placeholder="Last Name" required>
                 </div>
             </div>
         </div>
