@@ -9,8 +9,8 @@ body{
     justify-content: center;
     align-items: center;
     /* background-image: url("https://djmp3.live/wp-content/uploads/2020/09/burning-man-large-2.jpg"); */
-    /* background-image: url("https://i.dailymail.co.uk/i/pix/2011/09/07/article-2034587-0DC01C0E00000578-266_1024x615_large.jpg"); */
-    background-image: url("https://external-sea1-1.xx.fbcdn.net/safe_image.php?d=AQDJTpuZDlevarWz&w=500&h=261&url=https%3A%2F%2Fassets.rebelmouse.io%2FeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yMzMwNzY2Ny9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYwNDUwODM1MX0.vJHN5iDHm9WVDhyMuU3o6p8OPF6ENrDxqZKGEPefeSI%2Fimg.jpg%3Fwidth%3D1200%26coordinates%3D0%252C37%252C0%252C38%26height%3D600&cfs=1&ext=jpg&_nc_cb=1&_nc_hash=AQBR7T_fzPJ937fR");
+    background-image: url("https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-0/s206x206/10639729_1537962226440429_3592975803478843864_n.jpg?_nc_cat=111&ccb=2&_nc_sid=da31f3&_nc_ohc=0jf0aEvRdMAAX-SpZj_&_nc_ht=scontent-sea1-1.xx&tp=7&oh=4e64995a7c27861bac8b11442a2abe37&oe=5FCBB168");
+    /* background-image: url("https://external-sea1-1.xx.fbcdn.net/safe_image.php?d=AQDJTpuZDlevarWz&w=500&h=261&url=https%3A%2F%2Fassets.rebelmouse.io%2FeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yMzMwNzY2Ny9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYwNDUwODM1MX0.vJHN5iDHm9WVDhyMuU3o6p8OPF6ENrDxqZKGEPefeSI%2Fimg.jpg%3Fwidth%3D1200%26coordinates%3D0%252C37%252C0%252C38%26height%3D600&cfs=1&ext=jpg&_nc_cb=1&_nc_hash=AQBR7T_fzPJ937fR"); */
     background-color: #0156a5;
     }
 
@@ -26,6 +26,11 @@ justify-content: center;
 color: aqua;
 
 }
+
+.form-check-label:hover {
+    color: snow;
+}
+
 
 .emailAndAddressForm {
     justify-content: left;
