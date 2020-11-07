@@ -31,7 +31,9 @@ color: aqua;
     color: snow;
 }
 
-
+.form-check-label{
+    color: rgb(12, 206, 6);
+}
 .emailAndAddressForm {
     justify-content: left;
     float: left;

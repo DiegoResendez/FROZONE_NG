@@ -27,10 +27,13 @@ const NewUserCityElement = document.getElementById("NewUserCity");
 const newUserStateElement = document.getElementById("newUserState");
 const newUserZipElement = document.getElementById("newUserZip");
 const newUserLastNameElement = document.getElementById("newUserLastName");
+const newPlayaNameElement = document.getElementById("newPlayaName");
 
 
 // const lastNameElement = document.getElementById("lastName");
 // const lastNameElement = document.getElementById("lastName");
+// const lastNameElement = document.getElementById("lastName");
+
 
 let statesArray = []; //Array of State Abbrviations or a forLoop to go through and add to options in index.html lines 58,59 & 100,101
 let suckersInfoArray = [];
@@ -261,9 +264,17 @@ let answerButton = document.getElementsByClassName("buttonAnswer");
     }) 
 }
 
+function showNewPlayaName(masculinePlayaNamesArray){
+
+    return masculinePlayaNamesArray[Math.floor(Math.random()*masculinePlayaNamesArray.length)];
+}
+// console.log(showNewPlayaName(masculinePlayaNamesArray));
+
 function showPlayaNameScreen(){
     newPlayaNameScreenElement.classList.remove("hide");
     questionContainerElement.classList.add("hide");
+    showNewPlayaName();
+
     // show your scoreboard
     // setScore();
     // console.log("hibbity dibbity")
