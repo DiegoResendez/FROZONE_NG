@@ -86,3 +86,8 @@ color: aqua;
 .suckerScreenSecondText {
     color: rgba(237, 253, 11, 0.897);
 }
+
+.newPlayaName{
+    color: rgb(2, 235, 235);
+    font-size: x-large;
+}

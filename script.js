@@ -264,22 +264,25 @@ let answerButton = document.getElementsByClassName("buttonAnswer");
     }) 
 }
 
-function showNewPlayaName(masculinePlayaNamesArray){
-
-    return masculinePlayaNamesArray[Math.floor(Math.random()*masculinePlayaNamesArray.length)];
-}
-// console.log(showNewPlayaName(masculinePlayaNamesArray));
 
 function showPlayaNameScreen(){
     newPlayaNameScreenElement.classList.remove("hide");
     questionContainerElement.classList.add("hide");
     showNewPlayaName();
-
-    // show your scoreboard
-    // setScore();
-    // console.log("hibbity dibbity")
-    // add and remove hides
 }
+
+
+function showNewPlayaName(){
+    console.log("Show Playa Name");
+    let rand = Math.random();
+    let masculineNames = masculinePlayaNamesArray.length;
+    let randName = Math.floor(rand * masculineNames )
+    let newUserPlayaName = masculinePlayaNamesArray[randName];
+    console.log(newUserPlayaName);
+    
+    return newUserPlayaName;
+    }
+
 
 const question = [
     {
