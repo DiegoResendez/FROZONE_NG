@@ -34,7 +34,6 @@ const newPlayaNameElement = document.getElementById("newPlayaName");
 // const lastNameElement = document.getElementById("lastName");
 // const lastNameElement = document.getElementById("lastName");
 
-
 let statesArray = []; //Array of State Abbrviations or a forLoop to go through and add to options in index.html lines 58,59 & 100,101
 let suckersInfoArray = [];
 let userInfoArray = [];
@@ -44,7 +43,9 @@ const buttonB = document.getElementById("buttonB");
 const buttonC = document.getElementById("buttonC");
 const buttonD = document.getElementById("buttonD");
 
+let startingScore = 100;
 let questionNumber = 0;
+
 let femininePlayaNamesArray = ["Princess Lollipop", "Bright Eyes", "Butterfly", "Miss Kitty Meow Meow", "Summer Vacation", "Lotus Flower", "Sugar Buns", "Honey Smacks", "Ginger Snaps"];
 let masculinePlayaNamesArray = ["Shitty McDoodoopants", "Chad", "Beaver Basher", "Tyler Needick", "Piss Weasle", "Schlong Dongadoodle","Tan Bannana", "Dickie McNutsack", "Unicorn Jizz"];
 let kidsPlayaNamesArray = ["Kid appropriate name", "The Child", "Lil' Sebastian", "Tiger", "Beast", "Bobo"];
@@ -239,6 +240,10 @@ let answerButton = document.getElementsByClassName("buttonAnswer");
      answerButton[i].addEventListener("click", function(event){
          let answer = this.getAttribute("data")
          console.log(answer)
+         if (answer === "false"){
+            startingScore = startingScore - 10;
+            // console.log("if false")
+         } 
         if(questionNumber < question.length){
          console.log(questionNumber)
          setNextQuestion()
@@ -246,10 +251,6 @@ let answerButton = document.getElementsByClassName("buttonAnswer");
         else{
             showPlayaNameScreen();
         }
-        //  if (answer === "false"){
-        //     timerStart = timerStart - 10;
-        //     // console.log("if false")
-        //  } 
         //  if(questionNumber < question.length){
         //  console.log(questionNumber)
         //  setNextQuestion()
@@ -264,22 +265,57 @@ let answerButton = document.getElementsByClassName("buttonAnswer");
     }) 
 }
 
-
 function showPlayaNameScreen(){
     newPlayaNameScreenElement.classList.remove("hide");
     questionContainerElement.classList.add("hide");
     showNewPlayaName();
 }
 
-
 function showNewPlayaName(){
+    let finalScore = startingScore;
+    console.log(finalScore);
+
+    // let finalScore = {firstName: userFirstName, lastName: userLastName, score: startingScore, city: userCity, state: userState, zipcode: userZip};
+
+    if(finalScore >80){
+        let playaNameArrays = femininePlayaNamesArray.length;
+        let rand = Math.random();
+        let randName = Math.floor(rand * playaNameArrays )
+        let newUserPlayaName = femininePlayaNamesArray[randName];
+        console.log(newUserPlayaName);
+        newPlayaNameElement.textContent = newUserPlayaName;
+    } if(finalScore =70){
+        let playaNameArrays = fantasyPlayaNamesArray.length;
+        let rand = Math.random();
+        let randName = Math.floor(rand * playaNameArrays )
+        let newUserPlayaName = fantasyPlayaNamesArray[randName];
+        console.log(newUserPlayaName);
+        newPlayaNameElement.textContent = newUserPlayaName;
+    } if(finalScore = 60){
+        let playaNameArrays = kidsPlayaNamesArray.length;
+        let rand = Math.random();
+        let randName = Math.floor(rand * playaNameArrays )
+        let newUserPlayaName = kidsPlayaNamesArray[randName];
+        console.log(newUserPlayaName);
+        newPlayaNameElement.textContent = newUserPlayaName;
+    } if(finalScore <50){
+        let playaNameArrays = masculinePlayaNamesArray.length;
+        let rand = Math.random();
+        let randName = Math.floor(rand * playaNameArrays )
+        let newUserPlayaName = masculinePlayaNamesArray[randName];
+        console.log(newUserPlayaName);
+        newPlayaNameElement.textContent = newUserPlayaName;
+    }
+    else return null;
+    // else(finalScore >60 && <80)
+
     // console.log("Show Playa Name");
-    let rand = Math.random();
-    let masculineNames = masculinePlayaNamesArray.length;
-    let randName = Math.floor(rand * masculineNames )
-    let newUserPlayaName = masculinePlayaNamesArray[randName];
-    console.log(newUserPlayaName);
-    newPlayaNameElement.textContent = newUserPlayaName;
+    // let rand = Math.random();
+    // let masculineNames = masculinePlayaNamesArray.length;
+    // let randName = Math.floor(rand * masculineNames )
+    // let newUserPlayaName = masculinePlayaNamesArray[randName];
+    // console.log(newUserPlayaName);
+    // newPlayaNameElement.textContent = newUserPlayaName;
 
     }
 
