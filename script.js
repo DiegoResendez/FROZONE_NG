@@ -273,14 +273,14 @@ function showPlayaNameScreen(){
 
 
 function showNewPlayaName(){
-    console.log("Show Playa Name");
+    // console.log("Show Playa Name");
     let rand = Math.random();
     let masculineNames = masculinePlayaNamesArray.length;
     let randName = Math.floor(rand * masculineNames )
     let newUserPlayaName = masculinePlayaNamesArray[randName];
     console.log(newUserPlayaName);
-    
-    return newUserPlayaName;
+    newPlayaNameElement.textContent = newUserPlayaName;
+
     }
 
 
