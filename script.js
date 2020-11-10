@@ -284,14 +284,14 @@ function showNewPlayaName(){
         let newUserPlayaName = femininePlayaNamesArray[randName];
         console.log(newUserPlayaName);
         newPlayaNameElement.textContent = newUserPlayaName;
-    } if(finalScore =70){
+    } if(finalScore >=70){
         let playaNameArrays = fantasyPlayaNamesArray.length;
         let rand = Math.random();
         let randName = Math.floor(rand * playaNameArrays )
         let newUserPlayaName = fantasyPlayaNamesArray[randName];
         console.log(newUserPlayaName);
         newPlayaNameElement.textContent = newUserPlayaName;
-    } if(finalScore = 60){
+    } if(finalScore >=60){
         let playaNameArrays = kidsPlayaNamesArray.length;
         let rand = Math.random();
         let randName = Math.floor(rand * playaNameArrays )
